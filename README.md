@@ -4,13 +4,14 @@
 Simple Bash CLI tool to upload files to GoFile.io without API key.
 
 ## 🚀 Fitur
-- Upload file ke GoFile tanpa login
-- Auto-select server terbaik
-- CLI sederhana untuk Termux/Linux/Windows
-
+- Upload files to GoFile without logging in
+- Auto-select best server
+- Simple CLI for Termux/Linux/Windows
 ## 📦 Instalasi
 ```bash
 pkg update
 git clone https://github.com/idovpn1321/Uploader-GoFile.git
-cd up.sh
+cd Uploade-GiFile
+pkg install curl jq
+chmod ×x ./up.sh
 ./up.sh
