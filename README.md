@@ -11,7 +11,6 @@ Simple Python CLI tool to upload files to GoFile.io without API key.
 ## 📦 Instalasi
 ```bash
 pkg update
-pkg install python
 git clone https://github.com/idovpn1321/Uploader-GoFile.git
-cd Uploader-GoFile
-pip install -r requirements.txt
+cd up.sh
+./up.sh
