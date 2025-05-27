@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#anjay
 # GoFile Uploader with Fancy Progress Bar
 # Requires: curl, jq, bc (for calculations)
 
