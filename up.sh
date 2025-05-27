@@ -50,7 +50,7 @@ echo -e "$BORDER"
 
 # Query GoFile API to find the best server
 echo -ne "${CYAN}🔍 Finding best server...${NC}"
-SERVER=$(curl -s https://api.gofile.io/getServer | jq -r '.data.server[0].name')
+SERVER=$(curl -s https://api.gofile.io/servers | jq -r '.data.servers[0].name')
 
 if [[ -z "$SERVER" ]]; then
     echo -e "\r${RED}✖ ERROR:${NC} Could not get server from GoFile API"
@@ -61,7 +61,7 @@ echo -e "\r${GREEN}✓ Best server found:${NC} ${YELLOW}$SERVER${NC}"
 # Upload the file with progress bar
 echo -e "\n${CYAN}⬆️  Uploading file...${NC}"
 echo -e "$BORDER"
-LINK=$(curl --progress-bar -F "file=@$FILE" "https://${SERVER}.gofile.io/uploadFile" | jq -r '.data|.downloadPage') 2>&1
+LINK=$(curl -# -F "file=@$FILE" "https://${SERVER}.gofile.io/uploadFile" | jq -r '.data|.downloadPage') 2>&1
 echo -e "$BORDER"
 
 # Check if upload was successful
